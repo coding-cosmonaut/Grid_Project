@@ -1,0 +1,275 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar .right img {
+    width: 1.15rem;
+    height: 1.15rem;
+}
+
+.right {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.navbar .hamburger {
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+
+.navbar .bar {
+    background-color: black;
+    height: 4px;
+    width: 36px;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* .left button {
+    font-size: 0.9rem;
+    font-weight: 100;
+    padding: 15px 15px;
+    margin-left: 25px;
+    background-color: white;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 6px 2px 16px 0px rgba(136, 165, 191, 0.48),
+        -6px -2px 16px 0px rgba(255, 255, 255, 0.8);
+} */
+
+.grid-container {
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+    'eth eth alphabet'
+    'eth eth traveler'
+    'cube astro traveler'
+    'cup insta insta'
+    'cup insta insta'
+    'foam foam dimensional'
+    'foam foam dimensional'
+    ;
+    gap: 16px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    font-weight: bold;
+    font-size: 2.15rem;
+    letter-spacing: 0.4rem;
+    margin: 0;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+.overlay:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.eth {
+    grid-area: eth;
+    position: relative;
+    /* transition: opacity 0.2s ease; */
+}
+.eth:hover {
+    opacity: 0.7;
+}
+
+.alphabet {
+    grid-area: alphabet;
+    position: relative;
+    /* transition: opacity 0.2s ease; */
+}
+.alphabet:hover {
+    opacity: 0.7;
+}
+
+.traveler {
+    grid-area: traveler;
+    position: relative;
+}
+.traveler:hover {
+    opacity: 0.7;
+}
+
+.cube {
+    grid-area: cube;
+    position: relative;
+}
+.cube:hover {
+    opacity: 0.7;
+    color: white;
+}
+
+.astro {
+    grid-area: astro;
+    position: relative;
+}
+.astro:hover {
+    opacity: 0.7;
+    color: white;
+}
+
+.cup {
+    grid-area: cup;
+    position: relative;
+}
+.cup:hover {
+    opacity: 0.7;
+}
+
+.insta {
+    grid-area: insta;
+    position: relative;
+}
+.insta:hover {
+    opacity: 0.7;
+    color: white;
+}
+
+.foam {
+    grid-area: foam;
+    position: relative;
+}
+.foam:hover {
+    opacity: 0.7;
+}
+
+.dimensional {
+    grid-area: dimensional;
+    position: relative;
+}
+.dimensional:hover {
+    opacity: 0.7;
+    color: white;
+}
+
+.footer p {
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media only screen and (max-width: 1050px) and (min-width: 950px) {
+   .alphabet .overlay {
+    font-size: 1.15rem;
+   }
+   .traveler .overlay {
+       font-size: 1.15rem;
+   }
+   .astro .overlay {
+       font-size: 1.15rem;
+   }
+   .cube .overlay {
+       font-size: 1.15rem;
+   }
+   .cup .overlay {
+       font-size: 1.15rem;
+   }
+   .dimensional .overlay {
+       font-size: 1.15rem;
+   }
+}
+
+@media only screen and (max-width: 950px) {
+    .grid-container {
+        width: 100%;
+        max-width: 100%;
+        grid-template-areas:
+            'eth eth'
+            'eth eth'
+            'alphabet traveler'
+            'cube astro'
+            'insta insta'
+            'cup foam'
+            'dimensional dimensional'
+        ;
+        gap: 16px;
+        }
+}
+
+@media only screen and (max-width: 800px) {
+    .navbar .right {
+        display: none;
+    }
+    .navbar {
+        padding: 16px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: white;
+        width: 100%;
+        padding: 16px 33px;
+        box-sizing: border-box;
+    }
+
+    .navbar .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .grid-container {
+        margin-top: 100px;
+        grid-template-areas:
+            'eth eth'
+            'alphabet alphabet'
+            'traveler traveler'
+            'cube astro'
+            'insta insta'
+            'cup cup'
+            'foam foam'
+            'dimensional dimensional'
+        ;
+        gap: 16px;
+    }
+    .cube .overlay {
+        font-size: 1.15rem;
+    }
+    .astro .overlay {
+        font-size: 1.15rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .left h1 {
+        font-size: 1.5rem;
+    }
+}
