@@ -21,6 +21,11 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 24px 0;
+    /* position: fixed;
+    z-index: 100;
+    background-color: white;
+    width: 92%;
+    margin: 20px 0; */
 }
 
 .navbar a {
@@ -45,26 +50,16 @@ body {
     border-radius: 10px;
 }
 
+/*MAIN CONTAINER*/
 .container {
     max-width: 90%;
     margin: 0 auto;
 }
 
-/* .left button {
-    font-size: 0.9rem;
-    font-weight: 100;
-    padding: 15px 15px;
-    margin-left: 25px;
-    background-color: white;
-    border-radius: 30px;
-    border: none;
-    box-shadow: 6px 2px 16px 0px rgba(136, 165, 191, 0.48),
-        -6px -2px 16px 0px rgba(255, 255, 255, 0.8);
-} */
-
+/*GRID */
 .grid-container {
     display: grid;
-    width: 100%;
+    width: 95%;
     grid-template-areas: 
     'eth eth alphabet'
     'eth eth traveler'
@@ -74,7 +69,8 @@ body {
     'foam foam dimensional'
     'foam foam dimensional'
     ;
-    gap: 16px;
+    gap: 26px;
+    margin: 0 auto;
 }
 
 .grid-item img {
@@ -95,30 +91,114 @@ body {
     height: 100%;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    transition: all 0.2s ease;
+    color: rgba(0, 0, 0, 0);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
 }
 .overlay:hover {
-    opacity: 1;
+    color: rgba(0, 0, 0, 1);
     cursor: pointer;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+/*SLIDER LEFT*/
+.tag-container:before {
+    content: 'CSS';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(0, 0, 0); 
+    color: white;
+    /* top: 35.5px; */
+    top: 80px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    left: -82px;
+    font-size: 20px;
+    font-weight: bold;
+    transform: translateX(50px) rotate(270deg);
+    z-index: -10; 
+    transition: all 0.3s ease;
+}
+.tag-container:hover:before {
+    transform: translateX(20px) rotate(270deg);
 }
 
+.tag-container:after {
+    content: 'HTML';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 60px;
+    /* height: 70px; */
+    height: 45px;
+    border-left: 5px solid black;
+    /* background-color: rgb(0, 0, 0); */
+    background-color: white;
+    color: white;
+    /* bottom: 0; */
+    top: 0;
+    left: -50px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    transform: translateX(50px);
+    z-index: -10;
+    transition: all 0.3s ease;
+}
+.tag-container:hover:after {
+    transform: translateX(-15px);
+    color: black;
+}
+
+/*SLIDER RIGHT*/ 
+.tag-container-right:before {
+    content: 'React';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    /* top: 35.5px; */
+    top: 36px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    transform: translateX(50px) rotate(90deg);
+    z-index: -10;
+    transition: all 0.3s ease;
+}
+.tag-container-right:hover:before {
+    transform: translateX(75px) rotate(90deg);
+}
+
+/*INDIVIDUAL GRID ITEMS*/
 .eth {
     grid-area: eth;
+    transition: all 0.2s ease;
     position: relative;
-    /* transition: opacity 0.2s ease; */
 }
 .eth:hover {
-    opacity: 0.7;
+    transform: scale(0.98);
 }
 
 .alphabet {
     grid-area: alphabet;
     position: relative;
-    /* transition: opacity 0.2s ease; */
+    transition: all 0.2s ease;
 }
 .alphabet:hover {
-    opacity: 0.7;
+    transform: scale(0.98);
 }
 
 .traveler {
