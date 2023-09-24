@@ -21,6 +21,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 24px 0;
+    margin: 10px 0 20px 0;
     /* position: fixed;
     z-index: 100;
     background-color: white;
@@ -33,7 +34,9 @@ body {
     color: black;
 }
 .navbar a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    border-bottom: 1px solid black;
+    opacity: 0.7;
 }
 
 .navbar .hamburger {
@@ -56,6 +59,13 @@ body {
     margin: 0 auto;
 }
 
+/*MODAL*/
+/* .modal-body {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+} */
+
 /*GRID */
 .grid-container {
     display: grid;
@@ -63,7 +73,7 @@ body {
     grid-template-areas: 
     'eth eth alphabet'
     'eth eth traveler'
-    'cube astro traveler'
+    'cube cube traveler'
     'cup insta insta'
     'cup insta insta'
     'foam foam dimensional'
@@ -88,6 +98,7 @@ body {
     letter-spacing: 0.4rem;
     margin: 0;
     display: flex;
+    flex-direction: column;
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -97,10 +108,38 @@ body {
 }
 .overlay:hover {
     color: rgba(0, 0, 0, 1);
-    cursor: pointer;
+    /* cursor: pointer; */
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
+
+.overlay ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 1.5rem 0;
+    padding: 0;
+}
+
+.overlay li {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.overlay li a {
+    color: inherit;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.overlay li a:hover {
+    opacity: 0.7;
+    border-bottom: 1px solid black;
+}
+
 /*SLIDER LEFT*/
 .tag-container:before {
     content: 'CSS';
@@ -167,8 +206,7 @@ body {
     height: 30px;
     background-color: rgb(0, 0, 0);
     color: white;
-    /* top: 35.5px; */
-    top: 36px;
+    top: 35.2px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     right: 15px;
@@ -218,14 +256,14 @@ body {
     color: white;
 }
 
-.astro {
+/* .astro {
     grid-area: astro;
     position: relative;
-}
-.astro:hover {
+} */
+/* .astro:hover {
     opacity: 0.7;
     color: white;
-}
+} */
 
 .cup {
     grid-area: cup;
