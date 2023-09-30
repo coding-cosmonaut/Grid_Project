@@ -40,7 +40,7 @@ body {
 }
 
 .navbar .hamburger {
-    width: 50px;
+    width: 32px;
     height: 50px;
     display: none;
 }
@@ -48,10 +48,130 @@ body {
 .navbar .bar {
     background-color: black;
     height: 4px;
-    width: 36px;
+    width: 100%;
     margin: 3px;
     border-radius: 10px;
 }
+
+.hamburger .line1 {
+    transform-origin: 7.5% -1%;
+    animation: anBar1 0.4s ease-in-out forwards;
+}
+
+.hamburger .line2 {
+    animation: anBar2 0.4s ease-in-out forwards;
+}
+
+.hamburger .line3 {
+    transform-origin: -1% 100%;
+    animation: anBar3 0.4s ease-in-out forwards;
+}
+
+.hamburger .closeAnimation1 {
+    transform-origin: 0% 0%;
+    animation: closeAnimation1 0.4s ease-in-out forwards;
+}
+
+.hamburger .closeAnimation2 {
+    animation: closeAnimation2 0.4s ease-in-out forwards;
+}
+
+.hamburger .closeAnimation3 {
+    transform-origin: 0% 100%;
+    animation: closeAnimation3 0.4s ease-in-out forwards;
+}
+
+@keyframes anBar1 {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes closeAnimation1 {
+    from {
+        transform: rotate(45deg);
+    }
+    to {
+        transform: rotate(0);
+    }
+}
+
+@keyframes anBar2 {
+    from {
+        transform: scaleY(1);
+    }
+
+    to {
+        transform: scaleY(0);
+    }
+}
+
+@keyframes closeAnimation2 {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes anBar3 {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes closeAnimation3 {
+    from {
+        transform: rotate(-45deg);
+    }
+
+    to {
+        transform: rotate(0);
+    }
+}
+
+/*MOBILE NAV*/ 
+.mobile-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    transform: translateX(-150%);
+}
+
+.mobileNavAn {
+    animation: mobile 0.4s ease-in-out forwards;
+}
+
+.mobile-nav ul {
+    list-style: none;
+}
+
+.mobile-nav ul img {
+    width: 1.15rem;
+    height: 1.15rem;
+}
+
+@keyframes mobile {
+    from {
+        transform: translateX(-150%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
 
 /*MAIN CONTAINER*/
 .container {
@@ -491,7 +611,7 @@ textarea:focus~.highlight {
             'eth eth'
             'eth eth'
             'alphabet traveler'
-            'cube astro'
+            'cube cube'
             'insta insta'
             'cup foam'
             'dimensional dimensional'
@@ -528,7 +648,7 @@ textarea:focus~.highlight {
             'eth eth'
             'alphabet alphabet'
             'traveler traveler'
-            'cube astro'
+            'cube cube'
             'insta insta'
             'cup cup'
             'foam foam'
