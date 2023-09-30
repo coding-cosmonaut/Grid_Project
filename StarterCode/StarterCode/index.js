@@ -1,6 +1,6 @@
 const hamburgerBttn = document.querySelector(".hamburger");
 const allBars = document.querySelectorAll("#bar1, #bar2, #bar3");
-// const mobileDrawer = document.querySelector(".mobile-nav");
+const mobileDrawer = document.querySelector(".mobile-nav");
 
 hamburgerBttn.addEventListener("click", () => {
   let [firstLine, secondLine, thirdLine] = allBars;
@@ -38,5 +38,14 @@ hamburgerBttn.addEventListener("click", () => {
         bar.classList.add("closeAnimation3");
       }
     }
-  }
+    }
+    if (mobileDrawer.classList.contains("mobileClose")) {
+        mobileDrawer.classList.remove("mobileClose");
+    }
+    if (!mobileDrawer.classList.contains('mobileAnimation')) {
+        mobileDrawer.classList.add("mobileAnimation");
+    } else {
+        mobileDrawer.classList.remove("mobileAnimation");
+        mobileDrawer.classList.add('mobileClose')
+    }
 });
