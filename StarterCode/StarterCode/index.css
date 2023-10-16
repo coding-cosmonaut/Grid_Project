@@ -390,6 +390,7 @@ textarea:focus~.highlight {
     object-fit: cover;
 }
 
+/*HOVER OVERLAY FOR EACH GRID ITEM*/
 .overlay {
     position: absolute;
     top: 0;
@@ -441,7 +442,7 @@ textarea:focus~.highlight {
     border-bottom: 1px solid black;
 }
 
-/*SLIDER LEFT*/
+/*HOVER SLIDER LEFT*/
 .tag-container:before {
     content: 'CSS';
     display: flex;
@@ -452,7 +453,6 @@ textarea:focus~.highlight {
     height: 30px;
     background-color: rgb(0, 0, 0); 
     color: white;
-    /* top: 35.5px; */
     top: 80px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -493,7 +493,7 @@ textarea:focus~.highlight {
     color: black;
 }
 
-/*SLIDER RIGHT*/ 
+/*HOVER SLIDER RIGHT*/ 
 .tag-container-right:before {
     content: 'React';
     display: flex;
@@ -526,11 +526,19 @@ textarea:focus~.highlight {
     content: 'JS';
 }
 
+.alphabet .tag-container-right:before {
+    top: 35.89px;
+    right: 16px;
+}
+.alphabet .tag-container-right:hover:before {
+    transform: translateX(77px) rotate(90deg);
+}
+
 .traveler .tag-container-right:before {
     content: 'Vanilla JS';
     width: 115px;
-    top: 42.5px;
-    right: 7.5px;
+    top: 43.5px;
+    right: 8.5px;
 }
 
 /*INDIVIDUAL GRID ITEMS*/
@@ -558,7 +566,7 @@ textarea:focus~.highlight {
     transition: all 0.2s ease;
 }
 .traveler:hover {
-    transition: all 0.2s ease;
+    transform: scale(0.98);
 }
 
 .cube {
@@ -609,6 +617,8 @@ textarea:focus~.highlight {
     padding: 20px 0;
 }
 
+/*MEDIA-------------------------*/ 
+
 @media only screen and (max-width: 1050px) and (min-width: 950px) {
    .alphabet .overlay {
     font-size: 1.15rem;
@@ -625,6 +635,7 @@ textarea:focus~.highlight {
    .dimensional .overlay {
        font-size: 1.15rem;
    }
+
 }
 
 @media only screen and (min-width: 801px) {
@@ -647,7 +658,14 @@ textarea:focus~.highlight {
             'dimensional dimensional'
         ;
         gap: 16px;
-        }
+    }
+    .alphabet .tag-container-right:before {
+        left: 0;
+        transform: translateX(50px) rotate(270deg);
+    }
+    .alphabet .tag-container-right:hover:before {
+        transform: translateX(-61px) rotate(270deg);
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -655,7 +673,6 @@ textarea:focus~.highlight {
         display: none;
     }
     .navbar {
-        padding: 16px 0;
         position: fixed;
         top: 0;
         left: 0;
@@ -664,6 +681,7 @@ textarea:focus~.highlight {
         width: 100%;
         padding: 16px 33px;
         box-sizing: border-box;
+        margin-top: 0;
     }
 
     .navbar .hamburger {
